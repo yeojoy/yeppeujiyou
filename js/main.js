@@ -4,11 +4,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initI18n();
   initCountdown();
   initNavbar();
   initModal();
   initCopyTemplate();
-  initI18n();
 });
 
 let currentLang = 'ko';
@@ -751,10 +751,20 @@ const translations = {
 
 function initI18n() {
   const langButtons = document.querySelectorAll('.lang-btn');
+  const STORAGE_KEY = 'yeppeujiyou_lang';
   
-  function setLanguage(lang) {
+  function setLanguage(lang, persist = true) {
     if (!translations[lang]) return;
     currentLang = lang;
+
+    if (persist) {
+      try {
+        localStorage.setItem(STORAGE_KEY, lang);
+      } catch (e) {
+        // Handle restricted storage environments
+      }
+    }
+
     const t = translations[lang];
 
     // 1. Text elements with data-i18n
@@ -802,7 +812,33 @@ function initI18n() {
   langButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
       const lang = btn.getAttribute('data-lang');
-      setLanguage(lang);
+      setLanguage(lang, true);
     });
   });
+
+  // Resolve initial language on page load / refresh:
+  // 1. URL parameter (?lang=en, ?lang=fr, ?lang=ko)
+  // 2. Saved user preference in localStorage
+  // 3. Default fallback to 'ko'
+  let initialLang = 'ko';
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if (urlLang && translations[urlLang]) {
+      initialLang = urlLang;
+      try {
+        localStorage.setItem(STORAGE_KEY, urlLang);
+      } catch (e) {}
+    } else {
+      const savedLang = localStorage.getItem(STORAGE_KEY);
+      if (savedLang && translations[savedLang]) {
+        initialLang = savedLang;
+      }
+    }
+  } catch (e) {
+    // Keep fallback on restricted storage
+  }
+
+  // Apply initial language (without re-persisting)
+  setLanguage(initialLang, false);
 }
