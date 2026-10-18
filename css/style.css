@@ -1,0 +1,446 @@
+/* ==========================================================================
+   yeppeujiyou Hair Salon — Custom Styling
+   ========================================================================== */
+
+:root {
+  --color-bg-base: #FAF7F2;
+  --color-bg-card: #FFFFFF;
+  --color-bg-accent: #FDF4F1;
+  --color-bg-subtle: #F6EFE9;
+  
+  --color-primary: #D4887D;
+  --color-primary-hover: #BF7267;
+  --color-primary-light: #F7D6CD;
+  --color-primary-soft: #FDF1ED;
+
+  --color-text-main: #2C2422;
+  --color-text-muted: #7A6C67;
+  --color-text-light: #A39691;
+  --color-border: #EFE6DE;
+  
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', serif;
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --font-script: 'Marck Script', 'Nanum Pen Script', cursive;
+
+  --shadow-sm: 0 2px 8px rgba(44, 36, 34, 0.04);
+  --shadow-md: 0 8px 24px rgba(44, 36, 34, 0.06);
+  --shadow-lg: 0 16px 40px rgba(44, 36, 34, 0.09);
+  --shadow-glow: 0 10px 30px rgba(212, 136, 125, 0.25);
+  
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 9999px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(247, 214, 205, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(245, 213, 206, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(239, 230, 222, 0.6) 0%, transparent 50%),
+    var(--color-bg-base);
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Glassmorphism Header */
+.glass-nav {
+  background: rgba(250, 247, 242, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(239, 230, 222, 0.8);
+  transition: all 0.3s ease;
+}
+
+.glass-nav.scrolled {
+  background: rgba(250, 247, 242, 0.95);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Hero Section Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(247, 214, 205, 0.6);
+  border: 1px solid rgba(212, 136, 125, 0.4);
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  color: #8C473E;
+  font-weight: 500;
+}
+
+/* Flyer Image Card with realistic floating effect */
+.flyer-card-wrapper {
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.flyer-card-wrapper:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.flyer-card {
+  position: relative;
+  background: #FFF;
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  box-shadow: 
+    0 20px 50px rgba(44, 36, 34, 0.12),
+    0 1px 3px rgba(44, 36, 34, 0.05);
+  border: 1px solid rgba(239, 230, 222, 0.7);
+}
+
+.flyer-card img {
+  border-radius: calc(var(--radius-lg) - 8px);
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Countdown Card */
+.countdown-box {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  min-width: 68px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.countdown-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-light);
+}
+
+.countdown-number {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-text-main);
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-top: 0.35rem;
+  font-weight: 500;
+}
+
+/* Service Card */
+.service-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-light);
+}
+
+.service-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-bg-accent);
+  border: 1px solid rgba(212, 136, 125, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon-circle {
+  transform: scale(1.1) rotate(4deg);
+  background: var(--color-primary-light);
+}
+
+/* Policy Badge (Stamp style) */
+.stamp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #FFE8E3;
+  color: #B54D40;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1.5px dashed #D4887D;
+  box-shadow: 0 2px 10px rgba(212, 136, 125, 0.15);
+}
+
+/* Primary CTA Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(212, 136, 125, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 136, 125, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #FFFFFF;
+  color: var(--color-text-main);
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-bg-accent);
+  border-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* KakaoTalk Brand Button */
+.btn-kakao {
+  background: #FEE500;
+  color: #191919;
+  box-shadow: 0 4px 14px rgba(254, 229, 0, 0.35);
+}
+
+.btn-kakao:hover {
+  background: #FADA0A;
+  box-shadow: 0 6px 20px rgba(254, 229, 0, 0.5);
+  color: #000000;
+}
+
+/* Instagram Brand Button */
+.btn-instagram {
+  background: linear-gradient(45deg, #F58529, #D92E7F, #9B36B7);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(217, 46, 127, 0.35);
+}
+
+.btn-instagram:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 20px rgba(217, 46, 127, 0.5);
+}
+
+/* Native Accordion FAQ Styles */
+details[name="faq"] {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+details[name="faq"]:hover {
+  border-color: var(--color-primary-light);
+}
+
+details[name="faq"][open] {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+summary {
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  font-size: 1.05rem;
+  color: var(--color-text-main);
+  transition: color 0.2s ease;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  transition: transform 0.25s ease;
+}
+
+details[name="faq"][open] summary::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: 0 1.5rem 1.35rem 1.5rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 0.98rem;
+  border-top: 1px dashed rgba(239, 230, 222, 0.8);
+  padding-top: 1rem;
+}
+
+/* Native Dialog Modal Styling */
+dialog#booking-modal {
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 0;
+  background: #FFFFFF;
+  box-shadow: 0 25px 60px rgba(44, 36, 34, 0.25);
+  max-width: 520px;
+  width: 92%;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.96) translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), overlay 0.25s allow-discrete, display 0.25s allow-discrete;
+}
+
+dialog#booking-modal[open] {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+@starting-style {
+  dialog#booking-modal[open] {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+}
+
+dialog#booking-modal::backdrop {
+  background: rgba(44, 36, 34, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.25s ease, overlay 0.25s allow-discrete, display 0.25s allow-discrete;
+}
+
+dialog#booking-modal[open]::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
+  dialog#booking-modal[open]::backdrop {
+    opacity: 0;
+  }
+}
+
+/* Toast Notification */
+.toast-notice {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(44, 36, 34, 0.94);
+  color: #FFF;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+.toast-notice.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Mobile Sticky Bottom Booking Bar */
+.mobile-book-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--color-border);
+  padding: 0.75rem 1.25rem;
+  z-index: 1000;
+  box-shadow: 0 -4px 20px rgba(44, 36, 34, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .mobile-book-bar {
+    display: none;
+  }
+}

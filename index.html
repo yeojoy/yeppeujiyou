@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yeppeujiyou HAIR SALON (예쁘지유) — 몬트리올 프라이빗 1인 헤어살롱</title>
+  <meta name="description" content="예쁜 당신을 위한 공간 yeppeujiyou HAIR SALON. 몬트리올 1:1 프라이빗 헤어살롱. 11월 17일 GRAND OPEN. Hair Cut, Color, Perm, Straightening.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="yeppeujiyou HAIR SALON — 11월 17일 GRAND OPEN">
+  <meta property="og:description" content="소중한 헤어, 편안한 시간과 함께하세요. 몬트리올 프라이빗 1:1 홈 헤어살롱 yeppeujiyou.">
+  <meta property="og:image" content="assets/images/flyer.png">
+  <meta property="og:url" content="https://yeppeujiyu.ca">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Marck+Script&family=Nanum+Pen+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rose: {
+              50: '#FDF7F5',
+              100: '#FBF0EC',
+              200: '#F5D5CE',
+              300: '#E8A598',
+              400: '#D4887D',
+              500: '#BF7267',
+              600: '#A35A4F',
+              700: '#854238',
+            },
+            warm: {
+              50: '#FAF7F2',
+              100: '#F4ECE4',
+              200: '#EAE0D6',
+              800: '#4A3E3B',
+              900: '#2C2422',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-warm-900 bg-warm-50 antialiased selection:bg-rose-200 selection:text-warm-900">
+
+  <!-- ========================================================================
+       Top Navigation Bar
+       ======================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#hero" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-rose-400 rounded-lg p-1">
+        <img src="assets/images/icon_woman.png" alt="yeppeujiyou hair salon icon" class="w-10 h-10 object-contain transition-transform group-hover:scale-105" width="40" height="40">
+        <div class="flex flex-col">
+          <span class="font-serif text-2xl font-semibold tracking-tight text-warm-900 leading-none">yeppeujiyou</span>
+          <span class="text-[10px] tracking-[0.25em] text-rose-500 font-medium uppercase mt-1">HAIR SALON</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-800" aria-label="메인 메뉴">
+        <a href="#about" class="hover:text-rose-500 transition-colors" data-i18n="navAbout">살롱 소개</a>
+        <a href="#services" class="hover:text-rose-500 transition-colors" data-i18n="navServices">시술 안내</a>
+        <a href="#hours" class="hover:text-rose-500 transition-colors" data-i18n="navHours">영업 시간</a>
+        <a href="#booking" class="hover:text-rose-500 transition-colors" data-i18n="navBooking">예약 방법</a>
+        <a href="#faq" class="hover:text-rose-500 transition-colors" data-i18n="navFaq">FAQ</a>
+      </nav>
+
+      <!-- Right Controls: Language & Action -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Language Switcher -->
+        <div class="inline-flex p-1 bg-warm-100 rounded-full text-xs" role="group" aria-label="언어 선택">
+          <button type="button" class="lang-btn px-2.5 py-1 rounded-full transition-all bg-white shadow-sm font-semibold text-stone-900" data-lang="ko">KR</button>
+          <button type="button" class="lang-btn px-2.5 py-1 rounded-full transition-all text-stone-500 hover:text-stone-900" data-lang="en">EN</button>
+          <button type="button" class="lang-btn px-2.5 py-1 rounded-full transition-all text-stone-500 hover:text-stone-900" data-lang="fr">FR</button>
+        </div>
+
+        <!-- Quick Book Button -->
+        <button type="button" class="btn-primary open-booking-modal !py-2.5 !px-5 text-sm">
+          <span>예약 문의하기</span>
+          <span class="text-xs">♡</span>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <div class="inline-flex p-0.5 bg-warm-100 rounded-full text-xs mr-1">
+          <button type="button" class="lang-btn px-2 py-0.5 rounded-full bg-white font-semibold text-[11px]" data-lang="ko">KR</button>
+          <button type="button" class="lang-btn px-2 py-0.5 rounded-full text-stone-500 text-[11px]" data-lang="en">EN</button>
+        </div>
+        <button id="mobile-menu-toggle" type="button" class="p-2 rounded-lg text-warm-900 hover:bg-warm-100 focus:outline-none" aria-label="메뉴 열기" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-warm-50/98 border-b border-warm-200 px-6 py-5 shadow-lg">
+      <nav class="flex flex-col gap-4 text-base font-medium text-warm-800">
+        <a href="#about" class="py-1">살롱 소개</a>
+        <a href="#services" class="py-1">시술 안내</a>
+        <a href="#hours" class="py-1">영업 시간 및 위치</a>
+        <a href="#booking" class="py-1">예약 및 이용 안내</a>
+        <a href="#faq" class="py-1">자주 묻는 질문 (FAQ)</a>
+        <div class="pt-2 border-t border-warm-200 flex flex-col gap-2">
+          <button type="button" class="btn-primary open-booking-modal w-full justify-center">
+            예약 문의 작성하기 ♡
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-24">
+
+    <!-- ========================================================================
+         Hero Section
+         ======================================================================== -->
+    <section id="hero" class="relative overflow-hidden py-12 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Hero Left Column: Information & Actions -->
+          <div class="lg:col-span-7 flex flex-col items-start text-left">
+            
+            <!-- Opening Soon Tag -->
+            <div class="hero-badge mb-4">
+              <span class="inline-block w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+              <span id="hero-status-badge" data-i18n="heroBadge">Opening Soon ♡ 예쁜 당신을 위한 공간</span>
+            </div>
+
+            <!-- Main Title & Logo Typography -->
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-warm-900 leading-[1.15] mb-2">
+              yeppeujiyou
+            </h1>
+            <div class="flex items-center gap-3 text-rose-500 font-medium tracking-[0.3em] text-sm sm:text-base uppercase mb-6">
+              <span>—</span>
+              <span>HAIR SALON</span>
+              <span>—</span>
+            </div>
+
+            <!-- Opening Announcement Highlight -->
+            <div class="inline-block bg-rose-100/70 border border-rose-300/60 rounded-2xl px-5 py-3 mb-6">
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-warm-900">
+                OPEN <span class="text-rose-600 font-sans font-semibold text-xl sm:text-2xl" data-i18n="grandOpen">11월 17일 GRAND OPEN</span>
+              </p>
+            </div>
+
+            <p class="text-base sm:text-lg text-warm-800 leading-relaxed mb-8 max-w-xl" data-i18n="heroDesc">
+              소중한 헤어, 편안한 시간과 함께하세요.<br class="hidden sm:inline">
+              고객 한 분 한 분의 아름다움을 찾아드리는 몬트리올 프라이빗 1:1 홈 헤어살롱입니다.
+            </p>
+
+            <!-- D-Day Realtime Countdown Box -->
+            <div class="w-full max-w-md mb-8">
+              <p class="text-xs uppercase tracking-wider text-warm-800 font-semibold mb-2 flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>그랜드 오픈 카운트다운 (2026. 11. 17)</span>
+              </p>
+              <div class="grid grid-cols-4 gap-2.5 sm:gap-3">
+                <div class="countdown-box">
+                  <div id="count-days" class="countdown-number">00</div>
+                  <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-box">
+                  <div id="count-hours" class="countdown-number">00</div>
+                  <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-box">
+                  <div id="count-minutes" class="countdown-number">00</div>
+                  <div class="countdown-label">Mins</div>
+                </div>
+                <div class="countdown-box">
+                  <div id="count-seconds" class="countdown-number text-rose-500">00</div>
+                  <div class="countdown-label">Secs</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fast Contact CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto mb-6">
+              <!-- Text SMS Booking -->
+              <a href="sms:5149947965?body=%5Byeppeujiyou%20%EC%98%88%EC%95%BD%20%EB%AC%B8%EC%9D%98%5D%20%EC%84%B1%ED%95%A8%3A%20%2F%20%ED%9D%AC%EB%A7%9D%EC%8B%9C%EC%88%A0%3A%20%2F%20%ED%9D%AC%EB%A7%9D%EC%9D%BC%EC%8B%9C%3A" class="btn-primary flex-1 sm:flex-initial">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                </svg>
+                <span data-i18n="btnTextBook">문자로 예약 문의</span>
+              </a>
+
+              <!-- KakaoTalk Booking -->
+              <button type="button" class="btn-secondary btn-kakao copy-kakao-id flex-1 sm:flex-initial" title="카카오톡 ID 복사">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 3c-5.52 0-10 3.58-10 8 0 2.82 1.83 5.3 4.62 6.74-.2.74-.72 2.7-1.04 3.9-.11.41.15.41.31.3.13-.09 2.05-1.4 3.76-2.57.77.11 1.56.17 2.35.17 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/>
+                </svg>
+                <span data-i18n="btnKakaoBook">카카오톡 문의</span>
+              </button>
+
+              <!-- Instagram Profile -->
+              <a href="https://www.instagram.com/yeppeujiyu/" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-instagram !px-4" aria-label="Instagram @yeppeujiyu">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- "No call / Only text" Policy Notice -->
+            <div class="stamp-badge">
+              <svg class="w-4 h-4 text-rose-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+              </svg>
+              <span data-i18n="policyNoCall">No call / Only text ♥ (문자 예약제)</span>
+            </div>
+
+          </div>
+
+          <!-- Hero Right Column: Grand Opening Flyer Visual Card -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="flyer-card-wrapper max-w-sm sm:max-w-md w-full">
+              <!-- Decorative background glow -->
+              <div class="absolute -inset-2 bg-gradient-to-r from-rose-200 to-warm-200 rounded-[32px] blur-xl opacity-60"></div>
+              
+              <div class="flyer-card">
+                <img 
+                  src="assets/images/flyer.png" 
+                  alt="yeppeujiyou HAIR SALON 11월 17일 오프닝 포스터" 
+                  class="w-full h-auto shadow-sm"
+                  width="1202"
+                  height="1198"
+                  fetchpriority="high"
+                >
+                <div class="mt-3.5 px-2 flex items-center justify-between text-xs text-warm-800">
+                  <span class="flex items-center gap-1 font-medium">
+                    <span class="text-rose-500">♡</span> 100% 프라이빗 1인 예약제
+                  </span>
+                  <span class="text-rose-600 font-semibold">Montreal, QC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         About Section: Salon Philosophy & Atmosphere
+         ======================================================================== -->
+    <section id="about" class="py-16 sm:py-24 bg-white/70 border-y border-warm-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <span class="text-xs uppercase tracking-[0.25em] text-rose-500 font-semibold mb-2 block font-sans">About Our Studio</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-warm-900 mb-6">
+          예쁜 당신을 위한 공간
+        </h2>
+        <p class="font-serif italic text-lg sm:text-xl text-rose-500 mb-8">
+          "소중한 헤어, 편안한 시간과 함께하세요."
+        </p>
+
+        <p class="text-base sm:text-lg text-warm-800 leading-relaxed max-w-2xl mx-auto mb-12">
+          <strong>yeppeujiyou</strong>는 복잡하고 분주한 대형 살롱에서 벗어나,<br class="hidden sm:inline">
+          오직 한 분의 고객님께만 온전히 집중하는 <strong>1:1 프라이빗 홈 헤어살롱</strong>입니다.<br><br>
+          고객님의 모발 상태, 두피 건강, 라이프스타일과 얼굴형을 세심하게 고려하여<br class="hidden sm:inline">
+          가장 자연스럽고 예쁜 스타일을 편안한 힐링의 시간과 함께 선사해 드립니다.
+        </p>
+
+        <!-- 3 Pillars Feature Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div class="p-6 rounded-2xl bg-warm-50 border border-warm-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-rose-100/80 flex items-center justify-center text-rose-600 text-xl font-serif font-bold mb-4">
+              01
+            </div>
+            <h3 class="text-lg font-bold text-warm-900 mb-2">1:1 맞춤 세심한 케어</h3>
+            <p class="text-sm text-warm-800 leading-relaxed">
+              처음 상담부터 샴푸, 시술, 마무리 스타일링까지 디자이너가 고객님 한 분만을 전담하여 꼼꼼하게 진행합니다.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-warm-50 border border-warm-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-rose-100/80 flex items-center justify-center text-rose-600 text-xl font-serif font-bold mb-4">
+              02
+            </div>
+            <h3 class="text-lg font-bold text-warm-900 mb-2">편안한 프라이빗 공간</h3>
+            <p class="text-sm text-warm-800 leading-relaxed">
+              다른 손님들의 시선 없이 차분하고 아늑한 분위기에서 힐링하듯 헤어 케어를 받으실 수 있는 공간입니다.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-warm-50 border border-warm-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-rose-100/80 flex items-center justify-center text-rose-600 text-xl font-serif font-bold mb-4">
+              03
+            </div>
+            <h3 class="text-lg font-bold text-warm-900 mb-2">건강한 모발과 두피</h3>
+            <p class="text-sm text-warm-800 leading-relaxed">
+              모발 손상을 최소화하는 엄선된 프리미엄 제품만을 사용하여 시술 후에도 윤기 있고 건강한 결을 유지합니다.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Services Section: 4 Core Categories matching flyer
+         ======================================================================== -->
+    <section id="services" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-[0.25em] text-rose-500 font-semibold mb-2 block font-sans" data-i18n="serviceTitle">Signature Services</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-warm-900 mb-4">
+            전문적인 1:1 헤어 디자인
+          </h2>
+          <p class="text-base text-warm-800" data-i18n="serviceSubtitle">
+            포스터에 안내된 4가지 핵심 시술 라인업으로 최상의 만족을 선사합니다.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- 1. Hair Cut -->
+          <div class="service-card group">
+            <div>
+              <div class="service-icon-circle">
+                ✂️
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-warm-900 mb-2" data-i18n="cutTitle">Hair Cut</h3>
+              <p class="text-sm text-warm-800 leading-relaxed mb-6" data-i18n="cutDesc">
+                트렌디한 감각과 섬세한 테크닉으로 완성하는 여성·남성 맞춤형 디자인 커트.
+              </p>
+              <ul class="text-xs text-warm-800 space-y-2 mb-6 border-t border-warm-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 여성 디자인 레이어드 / 태슬 컷
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 남성 댄디 / 가일 컷 & 다운펌
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 페이스라인 맞춤 앞머리 디자인
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn-secondary open-booking-modal w-full text-xs justify-center py-2.5" data-service="Hair Cut (헤어 컷)">
+              커트 상담 문의하기
+            </button>
+          </div>
+
+          <!-- 2. Color -->
+          <div class="service-card group">
+            <div>
+              <div class="service-icon-circle">
+                🎨
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-warm-900 mb-2" data-i18n="colorTitle">Color</h3>
+              <p class="text-sm text-warm-800 leading-relaxed mb-6" data-i18n="colorDesc">
+                모발 손상을 최소화하는 프리미엄 염모제를 사용한 감성 컬러 & 톤온톤 스타일링.
+              </p>
+              <ul class="text-xs text-warm-800 space-y-2 mb-6 border-t border-warm-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 퍼스널 톤 맞춤 전체 염색
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 깔끔하고 자연스러운 뿌리염색
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 탈색 및 애쉬/트렌드 컬러링
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn-secondary open-booking-modal w-full text-xs justify-center py-2.5" data-service="Color (염색/컬러)">
+              염색 상담 문의하기
+            </button>
+          </div>
+
+          <!-- 3. Perm -->
+          <div class="service-card group">
+            <div>
+              <div class="service-icon-circle">
+                🌿
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-warm-900 mb-2" data-i18n="permTitle">Perm</h3>
+              <p class="text-sm text-warm-800 leading-relaxed mb-6" data-i18n="permDesc">
+                자연스러운 볼륨과 손질이 쉬운 웨이브를 선사하는 셋팅·디지털·볼륨 열펌.
+              </p>
+              <ul class="text-xs text-warm-800 space-y-2 mb-6 border-t border-warm-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 우아한 C컬 / S컬 열펌
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 드라이한 듯 자연스러운 셋팅펌
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 뿌리볼륨펌 & 남성 볼륨펌
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn-secondary open-booking-modal w-full text-xs justify-center py-2.5" data-service="Perm (펌/웨이브)">
+              펌 상담 문의하기
+            </button>
+          </div>
+
+          <!-- 4. Straightening -->
+          <div class="service-card group">
+            <div>
+              <div class="service-icon-circle">
+                ✨
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-warm-900 mb-2" data-i18n="straightTitle">Straightening</h3>
+              <p class="text-sm text-warm-800 leading-relaxed mb-6" data-i18n="straightDesc">
+                윤기와 찰랑임을 되찾아주는 프리미엄 매직 스트레이트 & 모발 영양 클리닉.
+              </p>
+              <ul class="text-xs text-warm-800 space-y-2 mb-6 border-t border-warm-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 차분하고 찰랑이는 매직 스트레이트
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 끝부분 컬을 살린 볼륨 매직
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-rose-400">✔</span> 극손상모 복구 케라틴 케어
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn-secondary open-booking-modal w-full text-xs justify-center py-2.5" data-service="Straightening (매직/스트레이트)">
+              매직 상담 문의하기
+            </button>
+          </div>
+
+        </div>
+
+        <div class="mt-12 text-center text-xs text-warm-800">
+          * 기장(Short / Medium / Long)과 모발 상태에 따라 시술 시간과 견적이 상이하므로 문자로 사진과 함께 문의해 주시면 친절히 안내해 드립니다.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Hours & Studio Information Section
+         ======================================================================== -->
+    <section id="hours" class="py-16 sm:py-24 bg-rose-50/50 border-y border-rose-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          
+          <!-- Hours Box -->
+          <div class="bg-white p-8 sm:p-10 rounded-3xl border border-warm-200 shadow-md">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 text-xl">
+                🕒
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-wider text-rose-500 font-semibold block">Business Hours</span>
+                <h3 class="font-serif text-2xl font-bold text-warm-900" data-i18n="hoursTitle">영업 시간 안내</h3>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center justify-between py-3 border-b border-warm-100">
+                <span class="font-semibold text-warm-900" data-i18n="hoursDays">화요일 ~ 토요일 (Tue ~ Sat)</span>
+                <span class="font-serif text-lg font-bold text-rose-600" data-i18n="hoursTime">10:00 AM ~ 5:00 PM</span>
+              </div>
+              <div class="flex items-center justify-between py-3 border-b border-warm-100">
+                <span class="font-semibold text-warm-800">일요일 · 월요일 (Sun · Mon)</span>
+                <span class="text-sm font-semibold text-stone-500 bg-stone-100 px-3 py-1 rounded-full" data-i18n="hoursClosed">정기 휴무 (Closed)</span>
+              </div>
+            </div>
+
+            <div class="bg-warm-50 p-4 rounded-xl border border-warm-200 text-xs text-warm-800 leading-relaxed">
+              💡 100% 예약제로 운영되오니 방문 전 반드시 문자나 카카오톡으로 일정을 예약해 주시기 바랍니다.
+            </div>
+          </div>
+
+          <!-- Studio & Location Notice -->
+          <div class="flex flex-col justify-center">
+            <span class="text-xs uppercase tracking-[0.25em] text-rose-500 font-semibold mb-2 block">Private Studio</span>
+            <h3 class="font-serif text-3xl font-bold text-warm-900 mb-4">
+              몬트리올 프라이빗 살롱 안내
+            </h3>
+            <p class="text-base text-warm-800 leading-relaxed mb-6">
+              <strong>yeppeujiyou</strong>는 캐나다 몬트리올(Montreal, QC)에 위치한 쾌적하고 조용한 프라이빗 홈 스튜디오입니다.
+            </p>
+
+            <div class="space-y-4 text-sm text-warm-800 mb-8">
+              <div class="flex items-start gap-3">
+                <span class="text-rose-500 text-base mt-0.5">📍</span>
+                <div>
+                  <strong class="text-warm-900">살롱 상세 주소</strong>
+                  <p class="text-xs text-warm-800 mt-0.5">고객님의 프라이버시와 1:1 케어 특성상, <strong>예약 확정 시 상세 주소와 주차 위치</strong>를 문자로 안내해 드립니다.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-rose-500 text-base mt-0.5">🚗</span>
+                <div>
+                  <strong class="text-warm-900">편리한 주차</strong>
+                  <p class="text-xs text-warm-800 mt-0.5">스튜디오 앞 주차 가능하여 자차로 편안하게 방문하실 수 있습니다.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-rose-500 text-base mt-0.5">💳</span>
+                <div>
+                  <strong class="text-warm-900">결제 안내</strong>
+                  <p class="text-xs text-warm-800 mt-0.5">Interac e-Transfer 및 Cash 결제가 가능합니다.</p>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn-primary open-booking-modal self-start">
+              예약 문의 및 주소 안내받기 ♡
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Booking & Policy Section: "No Call, Only Text"
+         ======================================================================== -->
+    <section id="booking" class="py-16 sm:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14">
+          <span class="text-xs uppercase tracking-[0.25em] text-rose-500 font-semibold mb-2 block font-sans" data-i18n="bookingTitle">Reservation Guide</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-warm-900 mb-4">
+            예약 안내 및 문의 방법
+          </h2>
+          <p class="text-base text-warm-800" data-i18n="bookingSubtitle">
+            100% 사전 예약제로 한 분 한 분께 최선을 다해 정성을 쏟습니다.
+          </p>
+        </div>
+
+        <!-- Essential Policy Banner: No Call Only Text -->
+        <div class="bg-gradient-to-r from-rose-100/90 to-warm-100/90 border border-rose-300/80 rounded-3xl p-6 sm:p-8 mb-10 text-center shadow-sm">
+          <div class="inline-flex items-center gap-2 bg-rose-500 text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-3">
+            Important Policy
+          </div>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-rose-700 mb-2">
+            No call / Only text ♥
+          </h3>
+          <p class="text-sm sm:text-base text-warm-900 leading-relaxed max-w-xl mx-auto">
+            시술 중에는 고객님의 머리에 집중하고 소음이 발생하여 <strong>전화 통화 응대가 어렵습니다.</strong><br class="hidden sm:inline">
+            모든 예약 및 상담 문의는 <strong>문자 메시지(SMS) 또는 카카오톡</strong>으로 남겨주시면 확인하는 대로 신속하고 친절하게 답변드리겠습니다.
+          </p>
+        </div>
+
+        <!-- 3-Step Reservation Process -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+          <div class="bg-white p-6 rounded-2xl border border-warm-200 text-center">
+            <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 font-bold flex items-center justify-center mx-auto mb-3 font-serif">1</div>
+            <h4 class="font-bold text-warm-900 mb-1">양식 작성 & 문자 전송</h4>
+            <p class="text-xs text-warm-800">아래 템플릿을 복사하여 희망 일시와 시술을 문자로 보내주세요.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border border-warm-200 text-center">
+            <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 font-bold flex items-center justify-center mx-auto mb-3 font-serif">2</div>
+            <h4 class="font-bold text-warm-900 mb-1">1:1 상담 및 시간 조율</h4>
+            <p class="text-xs text-warm-800">모발 상태와 시술 소요 시간을 고려하여 최적의 시간을 조율합니다.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border border-warm-200 text-center">
+            <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 font-bold flex items-center justify-center mx-auto mb-3 font-serif">3</div>
+            <h4 class="font-bold text-warm-900 mb-1">예약 확정 및 방문</h4>
+            <p class="text-xs text-warm-800">상세 주소와 주차 안내를 받으신 후 예약 시간에 방문해 주세요.</p>
+          </div>
+        </div>
+
+        <!-- Interactive Copy Template Box -->
+        <div class="bg-white rounded-3xl border border-warm-200 p-6 sm:p-8 shadow-md">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-100">
+            <div>
+              <h4 class="font-bold text-lg text-warm-900">간편 예약 문의 템플릿</h4>
+              <p class="text-xs text-warm-800">아래 양식을 복사하여 문자나 카카오톡에 붙여넣으시면 더욱 빠른 상담이 가능합니다.</p>
+            </div>
+            <button type="button" class="copy-template-btn btn-secondary !py-2 !px-4 text-xs font-semibold whitespace-nowrap">
+              📋 양식 전체 복사하기
+            </button>
+          </div>
+
+          <pre class="bg-warm-50 p-4 rounded-xl text-xs sm:text-sm text-warm-900 font-mono leading-relaxed overflow-x-auto border border-warm-200/80"><code>[yeppeujiyou 예약 문의]
+- 성함: 
+- 연락처: 
+- 희망 날짜 및 시간: 
+- 희망 시술 (커트 / 염색 / 펌 / 매직): 
+- 최근 1년 시술 이력 (탈색/블랙염색/매직 등): 
+- 모발 상태 및 문의사항: </code></pre>
+
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <a href="sms:5149947965?body=%5Byeppeujiyou%20%EC%98%88%EC%95%BD%20%EB%AC%B8%EC%9D%98%5D%0A-%20%EC%84%B1%ED%95%A8%3A%20%0A-%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%20%0A-%20%ED%9D%AC%EB%A7%9D%20%EB%82%A0%EC%A7%9C%20%EB%B0%8F%20%EC%8B%9C%EA%B0%84%3A%20%0A-%20%ED%9D%AC%EB%A7%9D%20%EC%8B%9C%EC%88%A0%3A%20%0A-%20%EC%B5%9C%EA%B7%BC%201%EB%85%84%20%EC%8B%9C%EC%88%A0%20%EC%9D%B4%EB%A0%A5%3A%20" class="btn-primary text-sm">
+              📱 문자로 템플릿 전송 (514.994.7965)
+            </a>
+            <button type="button" class="btn-secondary btn-kakao copy-kakao-id text-sm">
+              💬 카카오톡 ID 복사 (yeppeujiyu)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         FAQ Section: Accordion
+         ======================================================================== -->
+    <section id="faq" class="py-16 sm:py-24 bg-white/70 border-t border-warm-200">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <span class="text-xs uppercase tracking-[0.25em] text-rose-500 font-semibold mb-2 block font-sans">Help Center</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-warm-900 mb-3">
+            자주 묻는 질문 (FAQ)
+          </h2>
+          <p class="text-sm text-warm-800">
+            yeppeujiyou 이용 전 궁금하신 점을 확인해 보세요.
+          </p>
+        </div>
+
+        <!-- FAQ Items using Native <details name="faq"> -->
+        <div class="space-y-3">
+          
+          <details name="faq" open>
+            <summary>오픈일(11월 17일) 이전에도 사전 예약이 가능한가요?</summary>
+            <div class="faq-content">
+              네, 가능합니다! 현재 오픈 기념 사전 예약 접수를 받고 있습니다. 원하시는 오픈 주간(11월 17일 이후) 날짜와 시간을 문자로 남겨주시면 우선적으로 일정을 예약해 드립니다.
+            </div>
+          </details>
+
+          <details name="faq">
+            <summary>전화 통화 대신 문자(SMS)로만 문의해야 하나요?</summary>
+            <div class="faq-content">
+              네, 맞습니다. yeppeujiyou는 1인 전담 살롱으로 시술 중에는 고객님께 온전히 집중하기 위해 전화를 받지 않습니다("No call / Only text"). 문자(514.994.7965) 또는 카카오톡(@yeppeujiyu)으로 메시지를 남겨주시면 시술이 끝나는 대로 빠르게 확인하여 답장드립니다.
+            </div>
+          </details>
+
+          <details name="faq">
+            <summary>원하는 헤어스타일 사진을 보내서 상담할 수 있나요?</summary>
+            <div class="faq-content">
+              물론입니다! 원하시는 스타일 사진과 현재 고객님의 모발 사진(앞/옆/뒤)을 문자로 함께 첨부해 주시면, 고객님의 얼굴형과 모발 상태에 맞는 정확한 시술 상담과 예상 소요 시간을 안내해 드립니다.
+            </div>
+          </details>
+
+          <details name="faq">
+            <summary>주차 및 동반인 대기 공간이 있나요?</summary>
+            <div class="faq-content">
+              스튜디오 바로 앞에 전용 주차 공간이 마련되어 있어 주차가 매우 편리합니다. 1인 프라이빗 살롱이지만 편안한 대기 소파가 준비되어 있어 동반 1인까지 편안하게 대기하실 수 있습니다.
+            </div>
+          </details>
+
+          <details name="faq">
+            <summary>결제 수단은 무엇을 이용할 수 있나요?</summary>
+            <div class="faq-content">
+              캐나다 현지 은행 Interac e-Transfer 및 현금(Cash) 결제가 가능합니다.
+            </div>
+          </details>
+
+          <details name="faq">
+            <summary>예약 취소 및 일정 변경 정책은 어떻게 되나요?</summary>
+            <div class="faq-content">
+              1:1 프라이빗 샵 특성상 고객님 한 분만을 위해 해당 시간대를 비워두므로, 부득이하게 일정을 변경하거나 취소하셔야 할 경우 <strong>최소 24시간 전</strong>에 미리 문자로 연락 부탁드립니다.
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="bg-warm-900 text-warm-100 py-14 border-t border-warm-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-warm-800/80">
+        
+        <!-- Brand Info -->
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+            <span class="font-serif text-2xl font-bold tracking-tight text-white">yeppeujiyou</span>
+            <span class="text-[10px] tracking-[0.2em] text-rose-300 font-medium uppercase border-l border-warm-700 pl-3">HAIR SALON</span>
+          </div>
+          <p class="text-xs text-warm-200/80 max-w-sm leading-relaxed">
+            예쁜 당신을 위한 공간. 몬트리올 1:1 맞춤형 프라이빗 헤어살롱.<br>
+            소중한 헤어, 편안한 시간과 함께하세요.
+          </p>
+        </div>
+
+        <!-- Contact & Hours Quick Summary -->
+        <div class="flex flex-col sm:flex-row items-center gap-6 text-xs text-warm-200">
+          <div class="text-center sm:text-right">
+            <p class="text-white font-semibold mb-1">Business Hours</p>
+            <p>Tue ~ Sat : 10:00 AM – 5:00 PM</p>
+            <p class="text-rose-300">Sun & Mon : Closed</p>
+          </div>
+          <div class="w-px h-8 bg-warm-800 hidden sm:block"></div>
+          <div class="text-center sm:text-left">
+            <p class="text-white font-semibold mb-1">Reservations (Text Only)</p>
+            <p class="text-rose-300 font-semibold text-sm">514.994.7965</p>
+            <p>IG & Kakao : @yeppeujiyu</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Location -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-400">
+        <p>© 2026 yeppeujiyou Hair Salon. All rights reserved.</p>
+        <p class="flex items-center gap-2">
+          <span>Montreal, Quebec, Canada</span>
+          <span>•</span>
+          <span class="text-rose-400">Grand Opening 2026.11.17</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Mobile Bottom Fixed Booking Bar
+       ======================================================================== -->
+  <aside class="mobile-book-bar" aria-label="빠른 예약 바">
+    <div class="flex flex-col">
+      <span class="text-[11px] font-semibold text-rose-600">11월 17일 GRAND OPEN</span>
+      <span class="text-xs font-bold text-warm-900">예약 문의 514.994.7965</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="sms:5149947965?body=%5Byeppeujiyou%20%EC%98%88%EC%95%BD%20%EB%AC%B8%EC%9D%98%5D" class="btn-primary !py-2 !px-4 text-xs">
+        <span>문자 문의</span>
+        <span>✉️</span>
+      </a>
+      <button type="button" class="btn-secondary btn-kakao copy-kakao-id !py-2 !px-3 text-xs" aria-label="카톡 복사">
+        <span>카톡</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Native Booking Modal Dialog
+       ======================================================================== -->
+  <dialog id="booking-modal" aria-labelledby="modal-title">
+    <div class="p-6 sm:p-8">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between pb-4 border-b border-warm-100 mb-6">
+        <div>
+          <span class="text-xs font-semibold text-rose-500 uppercase tracking-wider block">Booking Helper</span>
+          <h3 id="modal-title" class="font-serif text-2xl font-bold text-warm-900">
+            yeppeujiyou 예약 문의
+          </h3>
+        </div>
+        <button id="close-modal-btn" type="button" class="text-warm-800 hover:text-warm-900 p-1.5 rounded-full hover:bg-warm-100" aria-label="닫기">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Notice: No Call Only Text -->
+      <div class="bg-rose-50 border border-rose-200 rounded-xl p-3 text-xs text-rose-800 flex items-center gap-2 mb-6">
+        <span class="text-base">📌</span>
+        <span><strong>No call / Only text</strong>: 시술 중 통화가 불가하여 문자로 접수됩니다.</span>
+      </div>
+
+      <!-- Form Inputs -->
+      <form method="dialog" class="space-y-4" onsubmit="return false;">
+        <div>
+          <label for="modal-name" class="block text-xs font-semibold text-warm-800 mb-1">성함</label>
+          <input type="text" id="modal-name" placeholder="예: 김지유" class="w-full px-3.5 py-2.5 rounded-xl border border-warm-200 text-sm focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 bg-warm-50/50">
+        </div>
+
+        <div>
+          <label for="modal-service-select" class="block text-xs font-semibold text-warm-800 mb-1">희망 시술</label>
+          <select id="modal-service-select" class="w-full px-3.5 py-2.5 rounded-xl border border-warm-200 text-sm focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 bg-warm-50/50">
+            <option value="Hair Cut (헤어 컷)">Hair Cut (여성/남성 헤어 컷)</option>
+            <option value="Color (염색/컬러)">Color (전체 염색/뿌리염색/탈색)</option>
+            <option value="Perm (펌/열펌)">Perm (셋팅펌/디지털펌/볼륨펌)</option>
+            <option value="Straightening (매직 스트레이트)">Straightening (매직/볼륨매직)</option>
+            <option value="복합 시술 (커트 + 펌/염색)">복합 시술 (커트 + 펌/염색)</option>
+            <option value="기타 상담 문의">기타 상담 문의</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="modal-date" class="block text-xs font-semibold text-warm-800 mb-1">희망 날짜 및 시간</label>
+          <input type="text" id="modal-date" placeholder="예: 11월 18일(수) 오후 2시경" class="w-full px-3.5 py-2.5 rounded-xl border border-warm-200 text-sm focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 bg-warm-50/50">
+        </div>
+
+        <div>
+          <label for="modal-notes" class="block text-xs font-semibold text-warm-800 mb-1">모발 상태 / 최근 시술 이력 / 문의사항</label>
+          <textarea id="modal-notes" rows="3" placeholder="예: 어깨 길이 굵은 모발이며, 6개월 전 염색 이력 있습니다." class="w-full px-3.5 py-2 rounded-xl border border-warm-200 text-sm focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 bg-warm-50/50 resize-none"></textarea>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="pt-4 flex flex-col sm:flex-row gap-3">
+          <button id="send-sms-btn" type="button" class="btn-primary flex-1 justify-center text-sm">
+            <span>문자(SMS) 앱으로 전송</span>
+            <span>✉️</span>
+          </button>
+          <button id="modal-copy-btn" type="button" class="btn-secondary flex-1 justify-center text-sm">
+            <span>양식 복사하기</span>
+            <span>📋</span>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </dialog>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
