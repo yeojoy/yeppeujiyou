@@ -266,7 +266,7 @@ const translations = {
     aboutTitle: '예쁜 당신을 위한 공간',
     aboutQuote: '"소중한 헤어, 편안한 시간과 함께하세요."',
     brandStoryTag: 'Brand Name Story',
-    brandStory: '\'예쁘지요\'라는 한국어에 헤어드레서인 <strong>"지유"</strong>의 이름과 합하여 <strong>yeppeujiyou</strong>가 됐습니다.<br class="hidden sm:inline"> 고객님만을 위한 헤어로 당신을 예쁘게 만들어 드립니다.',
+    brandStory: '거울 속 새로워진 모습을 마주할 때 자연스레 건네게 되는 기분 좋은 한마디 <strong>"예쁘지?"(Yeppeuji?)</strong>, 그리고 그 주인공인 <strong>"당신"(You)</strong>이 만나 <strong>yeppeujiyou(예쁘지유)</strong>라는 이야기가 시작되었습니다.<br class="hidden sm:inline"> 당신이 가장 예뻐지는 순간을 선물하고 싶은 마음, 그리고 마지막엔 그 스타일을 완성해 드리는 헤어드레서 <strong>"지유"</strong>의 이름까지 함께 담겨 있습니다.',
     aboutDesc: '<strong>yeppeujiyou</strong>는 복잡하고 분주한 대형 살롱에서 벗어나,<br class="hidden sm:inline"> 오직 한 분의 고객님께만 온전히 집중하는 <strong>1:1 프라이빗 홈 헤어살롱</strong>입니다.<br><br> 고객님의 모발 상태, 두피 건강, 라이프스타일과 얼굴형을 세심하게 고려하여<br class="hidden sm:inline"> 가장 자연스럽고 예쁜 스타일을 편안한 힐링의 시간과 함께 선사해 드립니다.',
     pillar1Title: '1:1 맞춤 세심한 케어',
     pillar1Desc: '처음 상담부터 샴푸, 시술, 마무리 스타일링까지 디자이너가 고객님 한 분만을 전담하여 꼼꼼하게 진행합니다.',
@@ -321,7 +321,7 @@ const translations = {
     locParkingTitle: '편리한 주차',
     locParkingDesc: '스튜디오 앞 주차 가능하여 자차로 편안하게 방문하실 수 있습니다.',
     locPaymentTitle: '결제 안내',
-    locPaymentDesc: 'Interac e-Transfer 및 Cash 결제가 가능합니다.',
+    locPaymentDesc: 'e-Transfer 및 Cash 결제가 가능합니다.',
     btnGetAddress: '예약 문의 및 주소 안내받기 ♡',
 
     // Booking & Policy Section
@@ -357,7 +357,7 @@ const translations = {
     faq4Q: '주차 및 동반인 대기 공간이 있나요?',
     faq4A: '스튜디오 바로 앞에 전용 주차 공간이 마련되어 있어 주차가 매우 편리합니다. 1인 프라이빗 살롱이지만 편안한 대기 소파가 준비되어 있어 동반 1인까지 편안하게 대기하실 수 있습니다.',
     faq5Q: '결제 수단은 무엇을 이용할 수 있나요?',
-    faq5A: '캐나다 현지 은행 Interac e-Transfer 및 현금(Cash) 결제가 가능합니다.',
+    faq5A: '캐나다 현지 은행 e-Transfer 및 현금(Cash) 결제가 가능합니다.',
     faq6Q: '예약 취소 및 일정 변경 정책은 어떻게 되나요?',
     faq6A: '1:1 프라이빗 샵 특성상 고객님 한 분만을 위해 해당 시간대를 비워두므로, 부득이하게 일정을 변경하거나 취소하셔야 할 경우 <strong>최소 24시간 전</strong>에 미리 문자로 연락 부탁드립니다.',
 
@@ -437,7 +437,7 @@ const translations = {
     aboutTitle: 'A Special Space for You',
     aboutQuote: '"Cherish your hair with relaxing, private time."',
     brandStoryTag: 'Brand Name Story',
-    brandStory: 'The name <strong>yeppeujiyou</strong> was created by combining the Korean phrase <em>\'Yeppeujiyo\'</em> (meaning \'Isn\'t it pretty?\') with hairstylist <strong>Jiyu</strong>\'s name.<br class="hidden sm:inline"> We make you look and feel your most beautiful with hairstyles crafted just for you.',
+    brandStory: 'When you look in the mirror and see your transformed style, a warm smile and the Korean phrase <strong>"Yeppeuji?" ("Isn\'t it pretty?")</strong> naturally follow—combined with <strong>"You,"</strong> the star of that moment, to create the story of <strong>yeppeujiyou</strong>.<br class="hidden sm:inline"> Above all, tucked right at the end of the name is also hairstylist <strong>"Jiyu,"</strong> who brings your most beautiful look to life.',
     aboutDesc: 'Stepping away from the rush of crowded commercial salons, <strong>yeppeujiyou</strong> is an intimate <strong>1:1 private home hair studio</strong> fully focused on one guest at a time.<br><br> We carefully assess your hair condition, scalp wellness, lifestyle, and facial contours to deliver the most natural, radiant style alongside a truly peaceful and restorative experience.',
     pillar1Title: 'Tailored 1:1 Attentive Care',
     pillar1Desc: 'From initial consultation to shampoo, treatment, and final styling, your stylist personally handles every step with meticulous attention.',
@@ -492,7 +492,7 @@ const translations = {
     locParkingTitle: 'Easy Parking',
     locParkingDesc: 'Dedicated parking space is available right in front of the studio for your convenience.',
     locPaymentTitle: 'Payment Methods',
-    locPaymentDesc: 'We accept Canadian Interac e-Transfer and Cash.',
+    locPaymentDesc: 'We accept Canadian e-Transfer and Cash.',
     btnGetAddress: 'Inquire & Receive Address Details ♡',
 
     // Booking & Policy Section
@@ -528,7 +528,7 @@ const translations = {
     faq4Q: 'Is parking available, and can an accompanying guest wait?',
     faq4A: 'There is dedicated parking space right in front of the studio for easy access. While it is a private 1:1 studio, a comfortable waiting sofa is available for up to one accompanying guest.',
     faq5Q: 'What payment methods are accepted?',
-    faq5A: 'We accept Canadian Interac e-Transfer and Cash.',
+    faq5A: 'We accept Canadian e-Transfer and Cash.',
     faq6Q: 'What is the policy for cancellation and rescheduling?',
     faq6A: 'Because our 1:1 studio reserves the entire time slot exclusively for you, please notify us by text <strong>at least 24 hours in advance</strong> if you need to reschedule or cancel.',
 
@@ -608,7 +608,7 @@ const translations = {
     aboutTitle: 'Un espace pour vous sublimer',
     aboutQuote: '« Prenez soin de vos cheveux dans une ambiance intime et chaleureuse. »',
     brandStoryTag: 'L\'Histoire du nom',
-    brandStory: 'Le nom <strong>yeppeujiyou</strong> est né de l\'expression coréenne <em>« Yeppeujiyo »</em> (« N\'est-ce pas joli ? ») associée au prénom de la coiffeuse <strong>Jiyu</strong>.<br class="hidden sm:inline"> Nous révélons toute votre beauté avec des coiffures conçues spécialement pour vous.',
+    brandStory: 'En découvrant votre nouveau style dans le miroir, une douce question en coréen vient naturellement aux lèvres : <strong>« Yeppeuji ? » (« N\'est-ce pas joli ? »)</strong>, qui s\'unit à <strong>« You » (Vous)</strong> pour écrire l\'histoire de <strong>yeppeujiyou</strong>.<br class="hidden sm:inline"> Et tout à la fin de ce nom se cache aussi le prénom de votre coiffeuse, <strong>« Jiyu »</strong>, qui révèle votre beauté avec soin.',
     aboutDesc: 'Loin de l\'agitation des grands salons commerciaux, <strong>yeppeujiyou</strong> est un <strong>salon de coiffure privé à domicile 1:1</strong> entièrement dédié à une seule cliente à la fois.<br><br> Nous prenons soin d\'analyser la texture de vos cheveux, la santé de votre cuir chevelu, votre style de vie et vos traits pour créer une coiffure naturelle et élégante, tout en vous offrant un véritable moment de détente.',
     pillar1Title: 'Soins personnalisés et attentifs 1:1',
     pillar1Desc: 'De la consultation initiale au shampoing, en passant par le traitement et la finition, votre styliste s\'occupe de vous personnellement du début à la fin.',
@@ -663,7 +663,7 @@ const translations = {
     locParkingTitle: 'Stationnement facile',
     locParkingDesc: 'Un espace de stationnement est disponible juste devant le studio pour vous accueillir en toute tranquillité.',
     locPaymentTitle: 'Moyens de paiement',
-    locPaymentDesc: 'Nous acceptons les virements bancaires canadiens Interac et les paiements en argent comptant (Cash).',
+    locPaymentDesc: 'Nous acceptons les virements électroniques (e-Transfer) et les paiements en argent comptant (Cash).',
     btnGetAddress: 'Réserver et obtenir l\'adresse ♡',
 
     // Booking & Policy Section
@@ -699,7 +699,7 @@ const translations = {
     faq4Q: 'Le stationnement est-il disponible et un accompagnateur peut-il attendre sur place ?',
     faq4A: 'Un stationnement privé est disponible juste devant le studio. Bien qu\'il s\'agisse d\'un salon intime 1:1, un canapé confortable est à la disposition d\'un accompagnateur pendant votre séance.',
     faq5Q: 'Quels sont les modes de paiement acceptés ?',
-    faq5A: 'Nous acceptons les virements bancaires canadiens Interac et les paiements en argent comptant (Cash).',
+    faq5A: 'Nous acceptons les virements électroniques (e-Transfer) et les paiements en argent comptant (Cash).',
     faq6Q: 'Quelle est la politique d\'annulation et de modification ?',
     faq6A: 'Comme notre studio 1:1 réserve l\'intégralité du créneau horaire exclusivement pour vous, nous vous prions de nous aviser par texto <strong>au moins 24 heures à l\'avance</strong> pour toute annulation ou modification.',
 
