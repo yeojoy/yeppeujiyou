@@ -236,7 +236,7 @@ function showToast(message) {
    ========================================================================== */
 const translations = {
   ko: {
-    pageTitle: 'yeppeujiyou HAIR SALON (예쁘지유) — 몬트리올 프라이빗 1인 헤어살롱',
+    pageTitle: 'yeppeujiyou HAIR SALON (예쁘지유) — 몬트리올 사우스쇼어 프라이빗 1인 헤어살롱',
     bookingTitle: 'Reservation Guide',
     // Navigation
     navAbout: '살롱 소개',
@@ -249,7 +249,7 @@ const translations = {
     // Hero Section
     heroBadge: 'Opening Soon ♡ 예쁜 당신을 위한 공간',
     grandOpen: '11월 17일 GRAND OPEN',
-    heroDesc: '소중한 헤어, 편안한 시간과 함께하세요.<br class="hidden sm:inline"> 고객 한 분 한 분의 아름다움을 찾아드리는 몬트리올 프라이빗 1:1 홈 헤어살롱입니다.',
+    heroDesc: '소중한 헤어, 편안한 시간과 함께하세요.<br class="hidden sm:inline"> 고객 한 분 한 분의 아름다움을 찾아드리는 몬트리올 사우스쇼어 프라이빗 1:1 홈 헤어살롱입니다.',
     countdownTitle: '그랜드 오픈 카운트다운 (2026. 11. 17)',
     countDays: 'Days',
     countHours: 'Hours',
@@ -259,6 +259,7 @@ const translations = {
     btnKakaoBook: '카카오톡 문의',
     policyNoCall: 'No call / Only text ♥ (문자 예약제)',
     flyerTagPrivate: '100% 프라이빗 1인 예약제',
+    flyerLocation: 'South Shore · Montreal, QC',
     heroNowOpen: '🎉 NOW OPEN! 예약 문의 환영합니다 ♡',
 
     // About Section
@@ -314,8 +315,8 @@ const translations = {
     hoursClosed: '정기 휴무 (Closed)',
     hoursTip: '💡 100% 예약제로 운영되오니 방문 전 반드시 문자나 카카오톡으로 일정을 예약해 주시기 바랍니다.',
     studioSubtitle: 'Private Studio',
-    studioHeading: '몬트리올 프라이빗 살롱 안내',
-    studioIntro: '<strong>yeppeujiyou</strong>는 캐나다 몬트리올(Montreal, QC)에 위치한 쾌적하고 조용한 프라이빗 홈 스튜디오입니다.',
+    studioHeading: '몬트리올 사우스쇼어 프라이빗 살롱 안내',
+    studioIntro: '<strong>yeppeujiyou</strong>는 캐나다 몬트리올 사우스쇼어(South Shore, QC)에 위치한 쾌적하고 조용한 프라이빗 홈 스튜디오입니다.',
     locAddressTitle: '살롱 상세 주소',
     locAddressDesc: '고객님의 프라이버시와 1:1 케어 특성상, <strong>예약 확정 시 상세 주소와 주차 위치</strong>를 문자로 안내해 드립니다.',
     locParkingTitle: '편리한 주차',
@@ -362,10 +363,11 @@ const translations = {
     faq6A: '1:1 프라이빗 샵 특성상 고객님 한 분만을 위해 해당 시간대를 비워두므로, 부득이하게 일정을 변경하거나 취소하셔야 할 경우 <strong>최소 24시간 전</strong>에 미리 문자로 연락 부탁드립니다.',
 
     // Footer
-    footerDesc: '예쁜 당신을 위한 공간. 몬트리올 1:1 맞춤형 프라이빗 헤어살롱.<br>소중한 헤어, 편안한 시간과 함께하세요.',
+    footerDesc: '예쁜 당신을 위한 공간. 몬트리올 사우스쇼어 1:1 맞춤형 프라이빗 헤어살롱.<br>소중한 헤어, 편안한 시간과 함께하세요.',
     footerHoursHeading: 'Business Hours',
     footerResHeading: 'Reservations (Text Only)',
     footerRights: '© 2026 yeppeujiyou Hair Salon. All rights reserved.',
+    footerLocation: 'Montreal South Shore, Quebec, Canada',
 
     // Modal
     modalHelper: 'Booking Helper',
@@ -407,7 +409,7 @@ const translations = {
   },
 
   en: {
-    pageTitle: 'yeppeujiyou HAIR SALON — Montreal 1:1 Private Hair Studio',
+    pageTitle: 'yeppeujiyou HAIR SALON — Montreal South Shore 1:1 Private Hair Studio',
     bookingTitle: 'Reservation Guide',
     // Navigation
     navAbout: 'About',
@@ -420,7 +422,7 @@ const translations = {
     // Hero Section
     heroBadge: 'Opening Soon ♡ A Special Space for You',
     grandOpen: 'GRAND OPEN on November 17',
-    heroDesc: 'Cherish your hair with relaxing, private time.<br class="hidden sm:inline"> A cozy 1:1 private home hair studio in Montreal dedicated to bringing out your unique beauty.',
+    heroDesc: 'Cherish your hair with relaxing, private time.<br class="hidden sm:inline"> A cozy 1:1 private home hair studio in Montreal\'s South Shore dedicated to bringing out your unique beauty.',
     countdownTitle: 'Grand Opening Countdown (2026. 11. 17)',
     countDays: 'Days',
     countHours: 'Hours',
@@ -430,6 +432,7 @@ const translations = {
     btnKakaoBook: 'KakaoTalk Booking',
     policyNoCall: 'No call / Only text ♥ (Text-only booking)',
     flyerTagPrivate: '100% Private 1:1 Appointment',
+    flyerLocation: 'South Shore · Montreal, QC',
     heroNowOpen: '🎉 NOW OPEN! Inquiries welcome ♡',
 
     // About Section
@@ -485,8 +488,8 @@ const translations = {
     hoursClosed: 'Closed',
     hoursTip: '💡 As we operate strictly on a 100% reservation basis, please make sure to book your appointment via SMS or KakaoTalk before visiting.',
     studioSubtitle: 'Private Studio',
-    studioHeading: 'Montreal Private Studio Info',
-    studioIntro: '<strong>yeppeujiyou</strong> is a serene, comfortable private home hair studio located in Montreal, Quebec, Canada.',
+    studioHeading: 'Montreal South Shore Private Studio Info',
+    studioIntro: '<strong>yeppeujiyou</strong> is a serene, comfortable private home hair studio located in Montreal\'s South Shore, Quebec, Canada.',
     locAddressTitle: 'Detailed Address',
     locAddressDesc: 'For guest privacy and tailored 1:1 service, our <strong>exact street address and parking details</strong> are sent via text message once your booking is confirmed.',
     locParkingTitle: 'Easy Parking',
@@ -533,10 +536,11 @@ const translations = {
     faq6A: 'Because our 1:1 studio reserves the entire time slot exclusively for you, please notify us by text <strong>at least 24 hours in advance</strong> if you need to reschedule or cancel.',
 
     // Footer
-    footerDesc: 'A special space for you. Montreal 1:1 private home hair studio.<br>Cherish your hair with relaxing, private time.',
+    footerDesc: 'A special space for you. Montreal South Shore 1:1 private home hair studio.<br>Cherish your hair with relaxing, private time.',
     footerHoursHeading: 'Business Hours',
     footerResHeading: 'Reservations (Text Only)',
     footerRights: '© 2026 yeppeujiyou Hair Salon. All rights reserved.',
+    footerLocation: 'Montreal South Shore, Quebec, Canada',
 
     // Modal
     modalHelper: 'Booking Helper',
@@ -578,7 +582,7 @@ const translations = {
   },
 
   fr: {
-    pageTitle: 'yeppeujiyou HAIR SALON — Salon de coiffure privé à domicile à Montréal',
+    pageTitle: 'yeppeujiyou HAIR SALON — Salon de coiffure privé à domicile sur la Rive-Sud de Montréal',
     bookingTitle: 'Guide de réservation',
     // Navigation
     navAbout: 'À propos',
@@ -591,7 +595,7 @@ const translations = {
     // Hero Section
     heroBadge: 'Ouverture Bientôt ♡ Un espace pour vous sublimer',
     grandOpen: 'GRANDE OUVERTURE le 17 Novembre',
-    heroDesc: 'Prenez soin de vos cheveux dans une ambiance intime et chaleureuse.<br class="hidden sm:inline"> Salon de coiffure privé à domicile 1:1 à Montréal, dédié à révéler votre beauté unique.',
+    heroDesc: 'Prenez soin de vos cheveux dans une ambiance intime et chaleureuse.<br class="hidden sm:inline"> Salon de coiffure privé à domicile 1:1 sur la Rive-Sud de Montréal, dédié à révéler votre beauté unique.',
     countdownTitle: 'Compte à rebours de l\'ouverture (2026. 11. 17)',
     countDays: 'Jours',
     countHours: 'Heures',
@@ -601,6 +605,7 @@ const translations = {
     btnKakaoBook: 'KakaoTalk',
     policyNoCall: 'Pas d\'appel / Texto seulement ♥ (Réservation par texto)',
     flyerTagPrivate: '100% Privé sur rendez-vous 1:1',
+    flyerLocation: 'Rive-Sud · Montréal, QC',
     heroNowOpen: '🎉 MAINTENANT OUVERT ! Bienvenue ♡',
 
     // About Section
@@ -656,8 +661,8 @@ const translations = {
     hoursClosed: 'Fermé',
     hoursTip: '💡 Le studio fonctionne 100% sur rendez-vous. Merci de réserver votre plage horaire par texto ou KakaoTalk avant de vous déplacer.',
     studioSubtitle: 'Studio Privé',
-    studioHeading: 'Informations sur le Studio à Montréal',
-    studioIntro: '<strong>yeppeujiyou</strong> est un studio de coiffure privé à domicile, agréable et paisible, situé à Montréal, Québec, Canada.',
+    studioHeading: 'Informations sur le Studio (Rive-Sud de Montréal)',
+    studioIntro: '<strong>yeppeujiyou</strong> est un studio de coiffure privé à domicile, agréable et paisible, situé sur la Rive-Sud de Montréal, Québec, Canada.',
     locAddressTitle: 'Adresse du salon',
     locAddressDesc: 'Pour préserver votre intimité et assurer un service 1:1 sur mesure, <strong>l\'adresse exacte et les indications de stationnement</strong> vous sont transmises par texto dès confirmation du rendez-vous.',
     locParkingTitle: 'Stationnement facile',
@@ -704,10 +709,11 @@ const translations = {
     faq6A: 'Comme notre studio 1:1 réserve l\'intégralité du créneau horaire exclusivement pour vous, nous vous prions de nous aviser par texto <strong>au moins 24 heures à l\'avance</strong> pour toute annulation ou modification.',
 
     // Footer
-    footerDesc: 'Un espace pour vous sublimer. Salon de coiffure privé à domicile 1:1 à Montréal.<br>Prenez soin de vos cheveux dans une ambiance intime et chaleureuse.',
+    footerDesc: 'Un espace pour vous sublimer. Salon de coiffure privé à domicile 1:1 sur la Rive-Sud de Montréal.<br>Prenez soin de vos cheveux dans une ambiance intime et chaleureuse.',
     footerHoursHeading: 'Horaires',
     footerResHeading: 'Réservations (Texto seulement)',
     footerRights: '© 2026 Salon de coiffure yeppeujiyou. Tous droits réservés.',
+    footerLocation: 'Rive-Sud de Montréal, Québec, Canada',
 
     // Modal
     modalHelper: 'Aide à la réservation',
