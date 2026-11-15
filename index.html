@@ -71,9 +71,10 @@
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-800" aria-label="메인 메뉴">
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-warm-800" aria-label="메인 메뉴">
         <a href="#about" class="hover:text-rose-500 transition-colors" data-i18n="navAbout">살롱 소개</a>
         <a href="#services" class="hover:text-rose-500 transition-colors" data-i18n="navServices">시술 안내</a>
+        <a href="#prices" class="hover:text-rose-500 transition-colors" data-i18n="navPrices">가격 안내</a>
         <a href="#hours" class="hover:text-rose-500 transition-colors" data-i18n="navHours">영업 시간</a>
         <a href="#booking" class="hover:text-rose-500 transition-colors" data-i18n="navBooking">예약 방법</a>
         <a href="#faq" class="hover:text-rose-500 transition-colors" data-i18n="navFaq">FAQ</a>
@@ -116,6 +117,7 @@
       <nav class="flex flex-col gap-4 text-base font-medium text-warm-800">
         <a href="#about" class="py-1" data-i18n="navAbout">살롱 소개</a>
         <a href="#services" class="py-1" data-i18n="navServices">시술 안내</a>
+        <a href="#prices" class="py-1" data-i18n="navPrices">가격 안내</a>
         <a href="#hours" class="py-1" data-i18n="navHours">영업 시간</a>
         <a href="#booking" class="py-1" data-i18n="navBooking">예약 방법</a>
         <a href="#faq" class="py-1" data-i18n="navFaq">자주 묻는 질문 (FAQ)</a>
@@ -446,6 +448,227 @@
     </section>
 
     <!-- ========================================================================
+         Prices Section: Service Menu & Pricing
+         ======================================================================== -->
+    <section id="prices" class="py-16 sm:py-24 bg-white/80 border-t border-warm-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs uppercase tracking-[0.25em] text-rose-500 font-semibold mb-2 block font-sans" data-i18n="priceSubtitle">Service Menu & Pricing</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-warm-900 mb-4" data-i18n="priceMainHeading">시술 메뉴 및 가격 안내</h2>
+          <p class="text-base text-warm-800" data-i18n="priceDesc">
+            정찰제 기반의 투명하고 합리적인 가격으로 1:1 프리미엄 헤어 케어를 제공합니다.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+
+          <!-- Category Grid: 2 columns on sm+ -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+              <!-- 1. CUT -->
+              <div class="price-category-card">
+                <div class="price-category-header">
+                  <span class="price-category-icon" aria-hidden="true">✂️</span>
+                  <div>
+                    <h3 class="font-serif text-xl font-bold text-warm-900 tracking-wide">CUT</h3>
+                    <span class="text-xs text-rose-500 font-semibold" data-i18n="priceCatCutSub">컷트</span>
+                  </div>
+                </div>
+                <ul class="price-list">
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceCutWomen">여성 컷</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$40</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceCutMen">남성 컷</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$35</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceCutStudent">학생 컷</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$30</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceCutKids">어린이 컷</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$30</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceCutBangs">앞머리 컷</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$10</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 2. COLOR -->
+              <div class="price-category-card">
+                <div class="price-category-header">
+                  <span class="price-category-icon" aria-hidden="true">🎨</span>
+                  <div>
+                    <h3 class="font-serif text-xl font-bold text-warm-900 tracking-wide">COLOR</h3>
+                    <span class="text-xs text-rose-500 font-semibold" data-i18n="priceCatColorSub">염색</span>
+                  </div>
+                </div>
+                <ul class="price-list">
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceColorRoot">뿌리 염색</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$70~</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceColorFull">전체 염색</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$100~</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceColorPartialHighlight">부분 하이라이트</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$120~</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceColorFullHighlight">전체 하이라이트</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$180~</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="priceColorBalayage">발레아쥬</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$200~</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 3. PERM -->
+              <div class="price-category-card">
+                <div class="price-category-header">
+                  <span class="price-category-icon" aria-hidden="true">🌿</span>
+                  <div>
+                    <h3 class="font-serif text-xl font-bold text-warm-900 tracking-wide">PERM</h3>
+                    <span class="text-xs text-rose-500 font-semibold" data-i18n="priceCatPermSub">펌</span>
+                  </div>
+                </div>
+                <ul class="price-list">
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="pricePermRegular">일반 펌</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$120~</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="pricePermMen">남성 펌</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$100~</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="pricePermDown">다운펌</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$80~</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="pricePermIronDigital">아이롱 / 디지털 펌</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$180~</span>
+                  </li>
+                  <li class="price-item">
+                    <span class="price-name" data-i18n="pricePermSettingDigital">셋팅, 디지털펌</span>
+                    <span class="price-dots" aria-hidden="true"></span>
+                    <span class="price-value">$180~</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 4. STRAIGHT & 5. TREATMENT stacked -->
+              <div class="space-y-6">
+                <!-- 4. STRAIGHT -->
+                <div class="price-category-card">
+                  <div class="price-category-header">
+                    <span class="price-category-icon" aria-hidden="true">✨</span>
+                    <div>
+                      <h3 class="font-serif text-xl font-bold text-warm-900 tracking-wide">STRAIGHT</h3>
+                      <span class="text-xs text-rose-500 font-semibold" data-i18n="priceCatStraightSub">매직</span>
+                    </div>
+                  </div>
+                  <ul class="price-list">
+                    <li class="price-item">
+                      <span class="price-name" data-i18n="priceStraightRoot">뿌리 매직</span>
+                      <span class="price-dots" aria-hidden="true"></span>
+                      <span class="price-value">$130~</span>
+                    </li>
+                    <li class="price-item">
+                      <span class="price-name" data-i18n="priceStraightMagic">매직 스트레이트</span>
+                      <span class="price-dots" aria-hidden="true"></span>
+                      <span class="price-value">$170~</span>
+                    </li>
+                    <li class="price-item">
+                      <span class="price-name" data-i18n="priceStraightVolume">볼륨 매직</span>
+                      <span class="price-dots" aria-hidden="true"></span>
+                      <span class="price-value">$180~</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 5. TREATMENT -->
+                <div class="price-category-card">
+                  <div class="price-category-header">
+                    <span class="price-category-icon" aria-hidden="true">💧</span>
+                    <div>
+                      <h3 class="font-serif text-xl font-bold text-warm-900 tracking-wide">TREATMENT</h3>
+                      <span class="text-xs text-rose-500 font-semibold" data-i18n="priceCatTreatmentSub">트리트먼트</span>
+                    </div>
+                  </div>
+                  <ul class="price-list">
+                    <li class="price-item">
+                      <span class="price-name" data-i18n="priceTreatmentClinic">클리닉</span>
+                      <span class="price-dots" aria-hidden="true"></span>
+                      <span class="price-value">$70~</span>
+                    </li>
+                    <li class="price-item">
+                      <span class="price-name" data-i18n="priceTreatmentDeep">딥 리페어 클리닉</span>
+                      <span class="price-dots" aria-hidden="true"></span>
+                      <span class="price-value">$90~</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Special Combo Banner: Men's Haircut + Scalp Care -->
+            <div class="price-special-banner">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-rose-500/15 border border-rose-300/50 flex items-center justify-center text-2xl shrink-0">
+                  💆🏻‍♂️
+                </div>
+                <div>
+                  <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-rose-600 bg-rose-100 px-2.5 py-0.5 rounded-full mb-1" data-i18n="priceSpecialTag">Special Package</span>
+                  <h4 class="text-base sm:text-lg font-bold text-warm-900" data-i18n="priceSpecialTitle">남성 헤어컷 + 두피 스켈프 케어</h4>
+                  <p class="text-xs text-warm-800 font-medium" data-i18n="priceSpecialSub">Men's Haircut + Scalp Care</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 self-end sm:self-center">
+                <span class="font-serif text-3xl sm:text-4xl font-bold text-rose-600">$45</span>
+                <button type="button" class="btn-primary open-booking-modal !py-2 !px-4 text-xs" data-service="Men's Haircut + Scalp Care (남성 컷 + 두피 스켈프 케어 $45)">
+                  <span data-i18n="priceSpecialBtn">예약하기</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Pricing Footnote -->
+            <div class="rounded-2xl bg-warm-50 border border-warm-200/80 p-4 text-xs text-warm-800 space-y-1 leading-relaxed text-center">
+              <p data-i18n="priceNote1">※ 모발 컷 · 펌 · 시술 난이도에 따라 추가 요금이 발생할 수 있습니다.</p>
+              <p data-i18n="priceNote2">※ 모든 가격은 <strong>CAD(캐나다 달러)</strong> 기준입니다.</p>
+            </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
          Hours & Studio Information Section
          ======================================================================== -->
     <section id="hours" class="py-16 sm:py-24 bg-rose-50/50 border-y border-rose-100">
@@ -739,9 +962,11 @@
           <label for="modal-service-select" class="block text-xs font-semibold text-warm-800 mb-1" data-i18n="modalLabelService">희망 시술</label>
           <select id="modal-service-select" class="w-full px-3.5 py-2.5 rounded-xl border border-warm-200 text-sm focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 bg-warm-50/50">
             <option value="Hair Cut (헤어 컷)" data-i18n="modalOptCut">Hair Cut (여성/남성 헤어 컷)</option>
-            <option value="Color (염색/컬러)" data-i18n="modalOptColor">Color (전체 염색/뿌리염색/탈색)</option>
-            <option value="Perm (펌/열펌)" data-i18n="modalOptPerm">Perm (셋팅펌/디지털펌/볼륨펌)</option>
-            <option value="Straightening (매직 스트레이트)" data-i18n="modalOptStraight">Straightening (매직/볼륨매직)</option>
+            <option value="Men's Haircut + Scalp Care (남성 컷 + 두피 스켈프 케어 $45)" data-i18n="modalOptMensSpecial">Men's Haircut + Scalp Care (남성 컷 + 두피 스켈프 케어 $45)</option>
+            <option value="Color (염색/컬러)" data-i18n="modalOptColor">Color (전체 염색/뿌리염색/하이라이트/발레아쥬)</option>
+            <option value="Perm (펌/열펌)" data-i18n="modalOptPerm">Perm (일반펌/다운펌/셋팅·디지털펌)</option>
+            <option value="Straightening (매직 스트레이트)" data-i18n="modalOptStraight">Straightening (뿌리매직/매직/볼륨매직)</option>
+            <option value="Treatment (트리트먼트/클리닉)" data-i18n="modalOptTreatment">Treatment (모발 클리닉/딥 리페어 클리닉)</option>
             <option value="복합 시술 (커트 + 펌/염색)" data-i18n="modalOptCombo">복합 시술 (커트 + 펌/염색)</option>
             <option value="기타 상담 문의" data-i18n="modalOptOther">기타 상담 문의</option>
           </select>
