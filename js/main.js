@@ -1,11 +1,10 @@
 /**
  * yeppeujiyou Hair Salon — Main JavaScript
- * Multi-language (KO, EN, FR), Countdown, Reservation Modal & Template Copy
+ * Multi-language (KO, EN, FR), Reservation Modal & Template Copy
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initI18n();
-  initCountdown();
   initNavbar();
   initModal();
   initCopyTemplate();
@@ -14,51 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let currentLang = 'ko';
 
 /* ==========================================================================
-   1. Countdown Timer (Target: Nov 17, 2026 10:00:00 AM EST)
-   ========================================================================== */
-function initCountdown() {
-  const targetDate = new Date('2026-11-17T10:00:00-05:00').getTime();
-
-  const daysEl = document.getElementById('count-days');
-  const hoursEl = document.getElementById('count-hours');
-  const minutesEl = document.getElementById('count-minutes');
-  const secondsEl = document.getElementById('count-seconds');
-
-  if (!daysEl) return;
-
-  function update() {
-    const now = new Date().getTime();
-    const diff = targetDate - now;
-
-    if (diff <= 0) {
-      daysEl.textContent = '00';
-      hoursEl.textContent = '00';
-      minutesEl.textContent = '00';
-      secondsEl.textContent = '00';
-      const badge = document.getElementById('hero-status-badge');
-      if (badge) {
-        badge.textContent = translations[currentLang]?.heroNowOpen || '🎉 NOW OPEN!';
-      }
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-    daysEl.textContent = String(days).padStart(2, '0');
-    hoursEl.textContent = String(hours).padStart(2, '0');
-    minutesEl.textContent = String(minutes).padStart(2, '0');
-    secondsEl.textContent = String(seconds).padStart(2, '0');
-  }
-
-  update();
-  setInterval(update, 1000);
-}
-
-/* ==========================================================================
-   2. Sticky Glass Navbar
+   1. Sticky Glass Navbar
    ========================================================================== */
 function initNavbar() {
   const nav = document.querySelector('.glass-nav');
@@ -248,20 +203,13 @@ const translations = {
     btnQuickBook: '예약 문의하기',
 
     // Hero Section
-    heroBadge: 'Opening Soon ♡ 예쁜 당신을 위한 공간',
-    grandOpen: '11월 17일 GRAND OPEN',
+    heroBadge: '예쁜 당신을 위한 공간 ♡',
     heroDesc: '소중한 헤어, 편안한 시간과 함께하세요.<br class="hidden sm:inline"> 고객 한 분 한 분의 아름다움을 찾아드리는 몬트리올 사우스쇼어 프라이빗 1:1 홈 헤어살롱입니다.',
-    countdownTitle: '그랜드 오픈 카운트다운 (2026. 11. 17)',
-    countDays: 'Days',
-    countHours: 'Hours',
-    countMins: 'Mins',
-    countSecs: 'Secs',
     btnTextBook: '문자로 예약 문의',
     btnKakaoBook: '카카오톡 문의',
     policyNoCall: 'No call / Only text ♥ (문자 예약제)',
     flyerTagPrivate: '100% 프라이빗 1인 예약제',
     flyerLocation: 'South Shore · Montreal, QC',
-    heroNowOpen: '🎉 NOW OPEN! 예약 문의 환영합니다 ♡',
 
     // About Section
     aboutSubtitle: 'About Our Studio',
@@ -280,7 +228,7 @@ const translations = {
     // Services Section
     serviceTitle: 'Signature Services',
     serviceMainHeading: '전문적인 1:1 헤어 디자인',
-    serviceSubtitle: '포스터에 안내된 4가지 핵심 시술 라인업으로 최상의 만족을 선사합니다.',
+    serviceSubtitle: '4가지 핵심 시술 라인업으로 최상의 만족을 선사합니다.',
     cutTitle: 'Hair Cut',
     cutDesc: '트렌디한 감각과 섬세한 테크닉으로 완성하는 여성·남성 맞춤형 디자인 커트.',
     cutItem1: '여성 디자인 레이어드 / 태슬 컷',
@@ -432,7 +380,7 @@ const translations = {
     modalBtnCopy: '양식 복사하기',
 
     // Mobile Bar
-    mobileBarOpen: '11월 17일 GRAND OPEN',
+    mobileBarOpen: '100% 프라이빗 1인 예약제',
     mobileBarInquiry: '예약 문의 514.994.7965',
     mobileBarBtnSms: '문자 문의',
     mobileBarBtnKakao: '카톡',
@@ -463,20 +411,13 @@ const translations = {
     btnQuickBook: 'Book an Appointment',
 
     // Hero Section
-    heroBadge: 'Opening Soon ♡ A Special Space for You',
-    grandOpen: 'GRAND OPEN on November 17',
+    heroBadge: 'A Special Space for You ♡',
     heroDesc: 'Cherish your hair with relaxing, private time.<br class="hidden sm:inline"> A cozy 1:1 private home hair studio in Montreal\'s South Shore dedicated to bringing out your unique beauty.',
-    countdownTitle: 'Grand Opening Countdown (2026. 11. 17)',
-    countDays: 'Days',
-    countHours: 'Hours',
-    countMins: 'Mins',
-    countSecs: 'Secs',
     btnTextBook: 'Text to Book (SMS)',
     btnKakaoBook: 'KakaoTalk Booking',
     policyNoCall: 'No call / Only text ♥ (Text-only booking)',
     flyerTagPrivate: '100% Private 1:1 Appointment',
     flyerLocation: 'South Shore · Montreal, QC',
-    heroNowOpen: '🎉 NOW OPEN! Inquiries welcome ♡',
 
     // About Section
     aboutSubtitle: 'About Our Studio',
@@ -495,7 +436,7 @@ const translations = {
     // Services Section
     serviceTitle: 'Signature Services',
     serviceMainHeading: 'Professional 1:1 Hair Design',
-    serviceSubtitle: 'Offering top satisfaction through the 4 core service lines showcased on our flyer.',
+    serviceSubtitle: 'Offering top satisfaction through our 4 core signature service lines.',
     cutTitle: 'Hair Cut',
     cutDesc: 'Custom design cuts for women and men crafted with delicate technique and trendy touch.',
     cutItem1: 'Women\'s layered, tassel, or precision cuts',
@@ -647,7 +588,7 @@ const translations = {
     modalBtnCopy: 'Copy Message Template',
 
     // Mobile Bar
-    mobileBarOpen: 'GRAND OPEN NOV 17',
+    mobileBarOpen: '100% PRIVATE 1:1 STUDIO',
     mobileBarInquiry: 'Book: 514.994.7965',
     mobileBarBtnSms: 'Text SMS',
     mobileBarBtnKakao: 'Kakao',
@@ -678,20 +619,13 @@ const translations = {
     btnQuickBook: 'Prendre rendez-vous',
 
     // Hero Section
-    heroBadge: 'Ouverture Bientôt ♡ Un espace pour vous sublimer',
-    grandOpen: 'GRANDE OUVERTURE le 17 Novembre',
+    heroBadge: 'Un espace pour vous sublimer ♡',
     heroDesc: 'Prenez soin de vos cheveux dans une ambiance intime et chaleureuse.<br class="hidden sm:inline"> Salon de coiffure privé à domicile 1:1 sur la Rive-Sud de Montréal, dédié à révéler votre beauté unique.',
-    countdownTitle: 'Compte à rebours de l\'ouverture (2026. 11. 17)',
-    countDays: 'Jours',
-    countHours: 'Heures',
-    countMins: 'Mins',
-    countSecs: 'Secs',
     btnTextBook: 'Réserver par SMS',
     btnKakaoBook: 'KakaoTalk',
     policyNoCall: 'Pas d\'appel / Texto seulement ♥ (Réservation par texto)',
     flyerTagPrivate: '100% Privé sur rendez-vous 1:1',
     flyerLocation: 'Rive-Sud · Montréal, QC',
-    heroNowOpen: '🎉 MAINTENANT OUVERT ! Bienvenue ♡',
 
     // About Section
     aboutSubtitle: 'À propos de notre studio',
@@ -710,7 +644,7 @@ const translations = {
     // Services Section
     serviceTitle: 'Nos Services Signature',
     serviceMainHeading: 'Créations capillaires professionnelles 1:1',
-    serviceSubtitle: 'Une satisfaction garantie à travers les 4 catégories de soins présentées sur notre affiche.',
+    serviceSubtitle: 'Une satisfaction garantie à travers nos 4 catégories de soins signature.',
     cutTitle: 'Coupe de Cheveux',
     cutDesc: 'Coupes stylisées sur mesure pour femmes et hommes avec technique soignée et sens du détail.',
     cutItem1: 'Coupes dégradées, effilées ou structurées pour femmes',
@@ -862,7 +796,7 @@ const translations = {
     modalBtnCopy: 'Copier le message',
 
     // Mobile Bar
-    mobileBarOpen: 'OUVERTURE 17 NOV',
+    mobileBarOpen: '100% PRIVÉ SUR RENDEZ-VOUS',
     mobileBarInquiry: 'Réserver: 514.994.7965',
     mobileBarBtnSms: 'Texto',
     mobileBarBtnKakao: 'Kakao',
